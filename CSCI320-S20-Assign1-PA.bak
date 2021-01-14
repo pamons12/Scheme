@@ -1,0 +1,10 @@
+#lang racket
+;#1
+(caddr '(a b x d))
+(car(cadadr '(a (b (x d)))))
+(car(cadadr(caar '(((a (b (x) d)))))))
+
+;#2
+(cons 'a (cons 'b(cons 'x (cons 'd '()))))
+(cons 'a (cons (cons 'b (cons (cons 'x (cons 'd '())) '())) '()))
+(cons (cons 'x '()) (cons 'd '()))

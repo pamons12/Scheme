@@ -1,0 +1,8 @@
+#lang racket
+(define(apply_to_all op_name lst)
+  (cond
+    ((null? lst) '())
+    (else (cons (op_name(car lst)) (apply_to_all op_name (cdr lst))))
+    )
+  )
+(apply_to_all sqr '(1 2 3 4))

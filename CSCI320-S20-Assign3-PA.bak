@@ -1,0 +1,3 @@
+#lang racket
+(define (real  num) (car num))
+(define (complex  num) (cdr num))
